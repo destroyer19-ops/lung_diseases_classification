@@ -32,4 +32,14 @@ def preprocess_image(image) -> np.array:
     return image
 
 def classify_image(image: np.array) -> str:
+    
+    classification = loaded_model.classify(image, verbose=0)[0]
+    classified_label = classification_classes[np.argmax(classification)]
+    return {
+        "classification": classified_label,
+        "Normal": round(float(classification[0]), 6),
+        "Tuberculosis": round(float(classification[1]), 6),
+        "Covid": round(float(classification[2]), 6),
+        "Lung_Opacity": round(float(classification[3]), 6)
+    }
 
