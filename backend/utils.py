@@ -3,11 +3,13 @@ Utility functions for the web app
 """
 
 import os
+
 from tensorflow.keras.preprocessing.image import img_to_array
 from PIL import Image
 import numpy as np
 from config import loaded_model
 from flask import jsonify
+# os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 
 classification_classes = {

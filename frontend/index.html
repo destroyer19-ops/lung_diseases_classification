@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic Tool</title>
+</head>
+
+<body>
+    <div>
+        <form id="uploadForm">
+            <input type="file" accept="image/*" id="inputImage" name="file">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="results bg-third w-1/2 m-auto p-3 rounded-lg" id="results" style="display: none;">
+        <h3 class="result-header font-cabin font-bold mb-2">Results</h3>
+        <p class="img-name pl-5 font-cabin font-semibold" id="imgName"></p>
+        <p class="parasitized-p pl-5 mt-5">- Normal: <span class="para-value font-bold" id="normalValue"></span></p>
+        <p class="uninfected pl-5">- Tuberculosis: <span class="uninf-value font-bold" id="tuberculosisValue"></span>
+        </p>
+        <p class="uninfected pl-5">- Covid: <span class="uninf-value font-bold" id="covidValue"></span></p>
+        <p class="uninfected pl-5">- Lung_Opacity: <span class="uninf-value font-bold" id="lungOpacityValue"></span></p>
+        <p class="final-diagnosis mt-5 font-semibold">The results indicate that the sample is <span
+                class="diag-value font-bold font-cabin" id="diagnosisValue"></span></p>
+    </div>
+    <footer>
+        <script src="./script.js"></script>
+    </footer>
+</body>
+
+</html>
