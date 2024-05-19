@@ -5,9 +5,10 @@ import os
 from flask import Flask
 from flask_cors import CORS
 # import os
-os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 from tensorflow.keras.models import load_model
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
 app = Flask(__name__)
 CORS(app)
-loaded_model = load_model("./model/malaria_diagnosis_mobilenetv3Small.keras")
+x = "./model/malaria_diagnosis_mobilenetv3Small.keras"
+loaded_model = load_model(x)

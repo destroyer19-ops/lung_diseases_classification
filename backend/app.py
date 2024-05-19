@@ -1,10 +1,11 @@
 import os
 from flask import request, jsonify
-import tensorflow as tf
-print(tf.__version__)
+# import tensorflow as tf
+# print(tf.__version__)
 from config import app
 from utils import classify_image, preprocess_image
-# os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+
 
 @app.route('/')
 def index():
