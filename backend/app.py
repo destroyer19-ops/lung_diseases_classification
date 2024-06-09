@@ -13,14 +13,14 @@ def index():
 
 @app.route("/classify", methods=["POST"])
 def classify():
-    if "file" not in request.files:
+    if "xray_image" not in request.files:
         return jsonify({"error": "No file part"}), 400
 
-    file = request.files["file"]
-    if file.filename == '':
+    xray_image = request.files["xray_image"]
+    if xray_image.filename == '':
         return jsonify({"error": "No selected file"}), 400
 
-    img_array = preprocess_image(file)
+    img_array = preprocess_image(xray_image)
     classification = classify_image(img_array)
     return jsonify(classification)
 
