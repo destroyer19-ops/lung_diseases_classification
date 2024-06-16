@@ -3,5 +3,5 @@ numpy
 matplotlib
 keras
 pillow
-tesorflow
+tensorflow
 pandas
