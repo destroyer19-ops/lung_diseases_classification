@@ -1,9 +1,9 @@
 gunicorn
+tensorflow
 flask
 numpy
 flask_cors
 matplotlib
 keras
 pillow
-tensorflow==2.15.0
 pandas
