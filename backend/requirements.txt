@@ -5,5 +5,5 @@ flask_cors
 matplotlib
 keras
 pillow
-tensorflow
+tensorflow==2.15.0
 pandas
